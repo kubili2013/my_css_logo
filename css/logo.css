@@ -1,0 +1,175 @@
+/** css3 绘制动画效果的 LOGO **/
+.logo{
+    font-size:1%;
+    position:relative;
+    width:7.5em;
+    height:7.5em;
+    border:0.4em solid #bbb;
+    background: #eee;
+    border-radius:50%;
+}
+/* 头部的三角形 黑色*/
+.head{
+    position:absolute;
+    top:1.5em;
+    left:1.375em;
+    width: 0;
+    height: 0;
+    border-top:6.25em solid #000000;
+    border-bottom:0 solid #000000;
+    border-left:2.5em solid rgba(0,0,0,0);
+    border-right:2.5em solid rgba(0,0,0,0);
+}
+/* 脸 白色的三角形 覆盖黑色head后 变成 一个三角的框 */
+.face{
+    position:absolute;
+    top:1.75em;
+    left:1.625em;
+    width: 0.5em;
+    height: 0;
+    border-top:4.5em solid #ffffff;
+    border-bottom:0em solid #ffffff;
+    border-left:2.0em solid rgba(0,0,0,0);
+    border-right:2.0em solid rgba(0,0,0,0);
+    border-radius:40% 20% 0 0;
+}
+/* 左边的犄角 如果仔细看教程 你能明白这种效果是怎么出来的  */
+.left-horn{
+    position:absolute;
+    top:0;
+    left:1.375em;
+    width: 2.0em;
+    height: 2.5em;
+    border-top:0em solid #000000;
+    border-bottom:0em solid #000000;
+    border-left:0em solid #000000;
+    border-right:0.5em solid #000000;
+    border-radius:0 90% 0 0;
+}
+/* 右边的犄角 */
+.right-horn{
+    position:absolute;
+    top:0;
+    left:3.875em;
+    width: 2.0em;
+    height: 2.5em;
+    border-top:0em solid #000000;
+    border-bottom:0em solid #000000;
+    border-right:0em solid #000000;
+    border-left:0.5em solid #000000;
+    border-radius:90% 0 0 0;
+}
+/* 左边眼睛 */
+.left-eye{
+    position:absolute;
+    top:3.3em;
+    left:2.4em;
+    background:#ffffff;
+    width: 0;
+    height: 0;
+    border-top:0.25em solid #000000;
+    border-bottom:0.25em solid #000000;
+    border-right:0.25em solid #000000;
+    border-left:0.25em solid #000000;
+    border-radius:50%;
+    /** 旋转动画  */
+    /*animation: action 2s linear infinite;*/
+}
+/* 右边眼睛 */
+.right-eye{
+    position:absolute;
+    top:3.4em;
+    left:5.1em;
+    background:#ffffff;
+    width: 0em;
+    height: 0em;
+    border-top:0.2em solid #000000;
+    border-bottom:0.2em solid #000000;
+    border-right:0.2em solid #000000;
+    border-left:0.2em solid #000000;
+    border-radius:50%;
+    /** 旋转动画  */
+    /*animation: action 2s linear infinite;*/
+}
+/* 左边的眼镜框 */
+.left-glass{
+    position:absolute;
+    top:2.5em;
+    left:1.375em;
+    background:#ffffff;
+    width: 1.75em;
+    height: 1.75em;
+    border-top:0.25em solid #000000;
+    border-bottom:0.25em solid #000000;
+    border-right:0.25em solid #000000;
+    border-left:0.25em solid #000000;
+    border-radius:50%;
+}
+/* 右边的眼镜框 */
+.right-glass{
+    position:absolute;
+    top:2.75em;
+    left:4.375em;
+    background:#ffffff;
+    width: 1.25em;
+    height: 1.25em;
+    border-top:0.25em solid #000000;
+    border-bottom:0.25em solid #000000;
+    border-right:0.25em solid #000000;
+    border-left:0.25em solid #000000;
+    border-radius:50%;
+}
+/* 左边的鼻孔*/
+.left-nostril{
+    position:absolute;
+    top:5.0em;
+    left:3.625em;
+    background:#ffffff;
+    width: 0;
+    height: 0;
+    border-top:0.15em solid #000000;
+    border-bottom:0.15em solid #000000;
+    border-right:0.075em solid #000000;
+    border-left:0.075em solid #000000;
+    border-radius:50%;
+}
+/* 右边的鼻孔*/
+.right-nostril{
+    position:absolute;
+    top:5.0em;
+    left:4em;
+    background:#ffffff;
+    width: 0;
+    height: 0;
+    border-top:0.15em solid #000000;
+    border-bottom:0.15em solid #000000;
+    border-right:0.075em solid #000000;
+    border-left:0.075em solid #000000;
+    border-radius:50%;
+}
+/** 旋转动画  */
+@keyframes action {
+    from {
+        transform: rotate(0deg)  translate(0.3em) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(0.3em) rotate(-360deg);
+    }
+}
+
+/** 边框过渡动画  */
+.morph {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.morph:hover {
+    border: 0.4em solid #eee;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 10px rgba(255,255,255,.6), inset 0 0 10px rgba(255,255,255,1);
+    -moz-box-shadow: 0 0 10px rgba(255,255,255,.6), inset 0 0 10px rgba(255,255,255,1);
+    box-shadow: 0 0 10px rgba(255,255,255,.6), inset 0 0 10px rgba(255,255,255,1);
+
+}

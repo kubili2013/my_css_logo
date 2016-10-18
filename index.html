@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/logo.css">
+  <script type="text/javascript" src="js/logo.js" ></script>
+  <title>Document</title>
+  <style>
+  body{
+    background-color: #2e2256;
+    height:100%;
+    width:100%;
+    padding:200px;
+  }
+  .logo{
+    /** logo 大小全部用em做为单位 因此可以用font-size控制大小 **/
+    font-size:300%;
+  }
+  </style>
+</head>
+<body onmousemove="removeLogoEyes(event);">
+  <div id="logo"  class="logo morph" >
+    <!-- 左边的羊角  -->
+    <div id="left_horn" class="left-horn" ></div>
+    <!-- 右边的羊角  -->
+    <div id="right_horn" class="right-horn" ></div>
+    <!-- 头部三角形  -->
+    <div id="head" class="head" ></div>
+    <!-- 面部三角形  -->
+    <div id="face" class="face" ></div>
+    <!-- 左边的眼镜框  -->
+    <div id="left_glass" class="left-glass" ></div>
+    <!-- 右边的眼镜框  -->
+    <div id="right_glass" class="right-glass" ></div>
+    <!-- 左眼  -->
+    <div id="left_eye" class="left-eye" ></div>
+    <!-- 右眼  -->
+    <div id="right_eye" class="right-eye" ></div>
+    <!-- 左鼻孔 -->
+    <div id="left_nostril" class="left-nostril" ></div>
+    <!-- 右鼻孔 -->
+    <div id="right_nostril" class="right-nostril" ></div>
+    <div style="clear:both"></div>
+  </div>
+</body>
+</html>
